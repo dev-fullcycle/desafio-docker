@@ -1,7 +1,7 @@
 # Desafio Fullcycle Docker
 
 Desafio proposto pelo Wesley para manipulação de dockers e desenvolvimento local 
-- [x] Imagem com golang com emnos de 2mb
+- [x] Imagem com golang com menos de 2mb
 - [x] Nodejs como express gravando em um banco de dados e dando display 
 
 repositorio das imagens docker no dockerhub
@@ -40,5 +40,11 @@ Docker Compose version v2.20.2
 ```bash
 #No terminal para subior projeto parar editar em go 
 docker compose up --build -d
+
+docker build -t pacalexandre/fullcycle -f Dockerfile.desafio .
+
+docker login
+
+docker rm $(docker ps -a -q )
 
 ```

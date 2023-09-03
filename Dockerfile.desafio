@@ -1,4 +1,19 @@
-FROM golang:1.21.0
+FROM golang:1.21.0 AS builder
+
+WORKDIR /workspace
+
+COPY golang/. .
+
+RUN  export GOARCH=linux/amd64
+RUN  go build -o full
+
+
+
+#FROM alpine:3.16.7
+FROM busybox:latest
 
 WORKDIR /app
 
+COPY --from=builder /workspace/full .
+
+CMD ["./full"]
