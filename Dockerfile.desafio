@@ -4,9 +4,9 @@ WORKDIR /workspace
 
 COPY golang/. .
 
-RUN  export GOARCH=linux/amd64
+ENV GOOS=linux
+ENV GOARCH=386
 RUN  go build -o full
-
 
 
 #FROM alpine:3.16.7
