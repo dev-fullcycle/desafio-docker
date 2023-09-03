@@ -12,7 +12,6 @@ services:
     networks:
       - go-network
 
-
 networks:
   go-network:
     driver: bridge
