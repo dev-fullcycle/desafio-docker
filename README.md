@@ -21,6 +21,10 @@ build executvel para linux/386
 
 ```go build -o full```
 
+Correcao pra chegar no melhor compactação mudei o compilador pra tinygo assim atendi o desafio !
+
+```tinygo build -o full```
+
 
 ## Versões instaladas em meu ambiente.
 ```bash 
